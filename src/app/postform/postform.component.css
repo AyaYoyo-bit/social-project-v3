@@ -1,0 +1,72 @@
+.post-form {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.post-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+}
+
+.post-form input,
+.post-form textarea {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.post-form div[ng-reflect-ng-if] {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.post-form button {
+  width: 100%;
+  padding: 14px;
+  background-color: #007bff;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-form button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.post-form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.post-form label {
+  display: block;
+  font-weight: bold;
+  margin: 12px 0 5px;
+  color: #444;
+}
+

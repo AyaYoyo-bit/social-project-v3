@@ -1,0 +1,32 @@
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="post-form">
+  <h2>Add New Post</h2>
+
+  <label for="userName">Username</label>
+  <input id="userName" formControlName="userName" />
+  <div *ngIf="postForm.get('userName')?.touched && postForm.get('userName')?.invalid">
+    Username is required
+  </div>
+
+  <label for="userImage">User Image URL</label>
+  <input id="userImage" formControlName="userImage" />
+  <div *ngIf="postForm.get('userImage')?.touched && postForm.get('userImage')?.invalid">
+    User image is required
+  </div>
+
+  <label for="content">Post Content</label>
+  <textarea id="content" formControlName="content"></textarea>
+  <div *ngIf="postForm.get('content')?.touched && postForm.get('content')?.invalid">
+    Content is required
+  </div>
+
+  <label for="postImage">Post Image URL</label>
+  <input id="postImage" formControlName="postImage" />
+  <div *ngIf="postForm.get('postImage')?.touched && postForm.get('postImage')?.invalid">
+    Post image is required
+  </div>
+
+  <button type="submit" [disabled]="postForm.invalid">Add Post</button>
+</form>
+
+
+
